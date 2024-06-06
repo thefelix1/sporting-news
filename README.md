@@ -1,3 +1,3 @@
-# Sporting News
+# Football News Raycast Extension
 
-Get the latest news from Sporting CP
+Get the latest news from multiple portuguese football sources
