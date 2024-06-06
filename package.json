@@ -1,0 +1,112 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "portuguese-soccer-news",
+  "title": "Portuguese Soccer News",
+  "description": "Get the latest news from various Portuguese Soccer newspapers",
+  "icon": "command-icon.png",
+  "author": "miguel-felix1",
+  "categories": [
+    "News"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Portuguese Soccer News",
+      "description": "Check the latest Soccer news from several Portuguese Soccer newspapers",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "language",
+      "title": "Language",
+      "description": "Your preferred language. (Only Portuguese is not using machine translation)",
+      "required": false,
+      "type": "dropdown",
+      "default": "pt",
+      "data": [
+        {
+          "title": "Portuguese",
+          "value": "pt"
+        },
+        {
+          "title": "English",
+          "value": "en"
+        },
+        {
+          "title": "Spanish",
+          "value": "es"
+        },
+        {
+          "title": "French",
+          "value": "fr"
+        },
+        {
+          "title": "German",
+          "value": "de"
+        },
+        {
+          "title": "Italian",
+          "value": "it"
+        },
+        {
+          "title": "Japanese",
+          "value": "ja"
+        },
+        {
+          "title": "Korean",
+          "value": "ko"
+        },
+        {
+          "title": "Chinese (Simplified)",
+          "value": "zh-CN"
+        }
+      ]
+    },
+    {
+      "name": "dataSources",
+      "title": "News Source",
+      "description": "Select between the various Portuguese Football sources",
+      "required": false,
+      "type": "dropdown",
+      "default": "abola",
+      "data": [
+        {
+          "title": "Abola",
+          "value": "abola"
+        },
+        {
+          "title": "Maisfutebol",
+          "value": "maisfutebol"
+        },
+        {
+          "title": "Record",
+          "value": "record"
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@kreisler/js-google-translate-free": "^4.0.2",
+    "@raycast/api": "^1.75.1",
+    "html-to-md": "^0.8.5",
+    "json2md": "^2.0.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/json2md": "^1.5.4",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
